@@ -8,7 +8,7 @@ currently: working but needs more features to be implmented
 ```js
 require('dotenv').config()
 
-const osu = require('../library')
+const osu = require('osuv2')
 
 const client = osu.Client(process.env.OSU_ID, process.env.OSU_SECRET)
 
@@ -16,6 +16,8 @@ async function init() {
   await client.getGuestKey()
   console.log(await client.getUser('haruhime'))
 }
+
+init()
 ```
     
  ### A guest key will expire, I recommend you regenerate it every 20 hours
