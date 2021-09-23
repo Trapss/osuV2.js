@@ -1,0 +1,27 @@
+{
+  "name": "osuv2",
+  "version": "1.0.0",
+  "description": "osu api v2 wrapper",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trapss/osuV2.js.git"
+  },
+  "author": "Trapss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Trapss/osuV2.js/issues"
+  },
+  "homepage": "https://github.com/Trapss/osuV2.js#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "path": "^0.12.7",
+    "superagent": "^6.1.0"
+  }
+}

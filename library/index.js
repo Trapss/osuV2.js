@@ -1,17 +1,17 @@
 const path = require('path')
 
-const cClient = require(path.join(__dirname, './classes/client.js'))
+const cClient = require(path.join(__dirname, './classes/client'))
 
-const uAccuracy = require(path.join(__dirname, './utils/accuracy.js'))
+const uAccuracy = require(path.join(__dirname, './util/accuracy'))
 
 module.exports = {
 
-    Client: function client(id, secret) {
-        return new cClient(id, secret)
-    },
+  Client: function client(id, secret) {
+    return new cClient(id, secret)
+  },
 
-    accuracy: function accuracy(mode, hit300, hit100, hit50, hit0, hitkatu, hitgeki) {
-        return uAccuracy.accuracy(mode, hit300, hit100, hit50, hit0, hitkatu, hitgeki)
-    }
+  accuracy: function accuracy(mode, hit300, hit100, hit50, hit0, hitkatu, hitgeki) {
+    return uAccuracy.accuracy(mode, hit300, hit100, hit50, hit0, hitkatu, hitgeki)
+  }
 
 }
