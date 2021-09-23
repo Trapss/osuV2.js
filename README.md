@@ -18,4 +18,8 @@ async function init() {
 }
 ```
     
- ### A guest key will expire, I reccomend you regenerate it every 20 hours
+ ### A guest key will expire, I recommend you regenerate it every 20 hours
+   
+ # Contributing  
+   
+ When attempting to contribute please keep code style and formatting consistent as well as naming conventions.   
