@@ -1,4 +1,7 @@
 const superagent = require('superagent')
+const path = require('path')
+
+const cUser = require(path.join(__dirname, './user.js'))
 
 class Client(){
   constructor(id, secret){
@@ -9,7 +12,7 @@ class Client(){
   // function written by tienei
   // renew every 20 hours
   async getGuestKey() {
-    let token = await superagent.post("https://osu.ppy.sh/oauth/token")
+    const token = await superagent.post("https://osu.ppy.sh/oauth/token")
       .set('Content-Type', 'application/json')
       .send({
         "grant_type": "client_credentials",
@@ -21,11 +24,13 @@ class Client(){
     return token
   }
   
-  async getUser() {
-    let u = await superagent.get(uBase + `/users/${user}`)
+  async getUser(userIdentifier) {
+    let user = new cUser.User(userIdentifier)
+    const u = await superagent.get(uBase + `/users/${user}`)
       .set('Content-Type', 'application/json')
       .set('Authorization', `Bearer ${this.token}`)
-    return JSON.parse(u.text)
+    user = u
+    return user
   }
   
 }
