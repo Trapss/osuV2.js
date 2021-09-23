@@ -2,7 +2,7 @@
   "name": "osuv2",
   "version": "1.0.0",
   "description": "osu api v2 wrapper",
-  "main": "index.js",
+  "main": "library/index.js",
   "directories": {
     "example": "example"
   },
