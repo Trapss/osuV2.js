@@ -1,7 +1,9 @@
 const superagent = require('superagent')
 const path = require('path')
 
-const cUser = require(path.join(__dirname, './user.js'))
+const cUser = require(path.join(__dirname, './user'))
+const cBeatmap = require(path.join(__dirname, './beatmap'))
+
 const uBase = "https://osu.ppy.sh/api/v2"
 
 class Client {
@@ -10,7 +12,7 @@ class Client {
     this.secret = secret
   }
 
-  // function written by tienei
+  // function written (originally) by tienei
   // renew every 20 hours
   async getGuestKey() {
     const req = await superagent.post("https://osu.ppy.sh/oauth/token")
@@ -23,8 +25,8 @@ class Client {
       })
 
     const key = JSON.parse(req.text).access_token
-    this.token = key
 
+    this.token = key
     return key
   }
 
