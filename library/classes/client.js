@@ -26,7 +26,7 @@ class Client(){
   
   async getUser(userIdentifier) {
     let user = new cUser.User(userIdentifier)
-    const u = await superagent.get(uBase + `/users/${user}`)
+    const u = await superagent.get(uBase + `/users/${userIdentifier}`)
       .set('Content-Type', 'application/json')
       .set('Authorization', `Bearer ${this.token}`)
     user = u
