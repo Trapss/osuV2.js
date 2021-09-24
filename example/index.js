@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const osu = require('../library')
+const osu = require('../lib')
 
 const client = osu.Client(process.env.OSU_ID, process.env.OSU_SECRET)
 

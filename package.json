@@ -1,6 +1,6 @@
 {
   "name": "osuv2",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "osu api v2 wrapper",
   "main": "./lib/index.js",
   "directories": {
@@ -20,8 +20,7 @@
   },
   "homepage": "https://github.com/Trapss/osuV2.js#readme",
   "dependencies": {
-    "dotenv": "^10.0.0",
-    "path": "^0.12.7",
-    "superagent": "^6.1.0"
+    "axios": "^0.21.4",
+    "path": "^0.12.7"
   }
 }
