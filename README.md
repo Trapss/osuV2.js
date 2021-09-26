@@ -53,3 +53,8 @@ returns user data
 ```js
 await client.getUser(user)
 ```
+
+returns beatmap data
+```js
+await client.getBeatmap(beatmapID)
+```
