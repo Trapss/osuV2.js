@@ -1,6 +1,6 @@
 {
   "name": "osuv2",
-  "version": "1.1.2",
+  "version": "1.1.21",
   "description": "osu api v2 wrapper",
   "main": "./lib/index.js",
   "directories": {
