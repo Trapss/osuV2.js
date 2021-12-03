@@ -12,11 +12,7 @@ const osu = require('osuv2')
 
 const client = osu.Client(process.env.OSU_ID, process.env.OSU_SECRET)
 
-async function init() {
-  await	client.build()
-}
-
-init().then(async () => console.log(await client.getUser('haruhime')))
+console.log(await client.getUser('haruhime'))
 ```
 
  ### A guest key will expire, the library should regenerate it automatically
